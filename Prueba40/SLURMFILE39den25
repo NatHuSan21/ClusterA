@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#SBATCH --partition=GPU
+#SBATCH --job-name=391den25rep
+#SBATCH --ntasks-per-node=10
+#SBATCH --output=output391den25rep.out
+#SBATCH -o outfile391den25rep.log 
+#SBATCH -e errfile391den25rep.txt
+
+#SBATCH --mail-type=BEGIN,END,FAIL
+#SBATCH --mail-user=natalia.huitzil@cimat.mx
+#
+
+# exportar el path hacia los ejecutables de Python
+export PATH=$PATH:/opt/anaconda3_titan/bin
+source /home/est_posgrado_natalia.huitzil/.bashrc
+conda activate compu21
+
+hostname
+date
+# Ejecutar script
+
+cd /home/est_posgrado_natalia.huitzil/ST2/Prueba39
+
+#cd /home/est_posgrado_natalia.huitzil/.conda/envs/myenv/bin/python3.8
+#cd/home/est_posgrado_natalia.huitzil/.conda/envs/myenv/bin/python3.8 runner.py
+#/home/est_posgrado_natalia.huitzil/.conda/envs/compu21/bin/python3.8 Cluster_Prueba7_Denoising3curvGaussian.py
+
+
+#python Cluster_Prueba39_VectorialTotalVariation_0_den25_8K.py
+python Cluster_Prueba39_VectorialTotalVariationOPP_1_den25_8K.py
+
+date
