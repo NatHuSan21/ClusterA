@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#SBATCH --partition=GPU
+#SBATCH --job-name=481debUspRepUnic
+#SBATCH --ntasks-per-node=10
+#SBATCH --output=output481debUspUnic.out
+#SBATCH -o outfile481debUspRepUnic.log 
+#SBATCH -e errfile481debUspRepUnic.txt
+
+#SBATCH --mail-type=BEGIN,END,FAIL
+#SBATCH --mail-user=natalia.huitzil@cimat.mx
+#
+
+# exportar el path hacia los ejecutables de Python
+export PATH=$PATH:/opt/anaconda3_titan/bin
+source /home/est_posgrado_natalia.huitzil/.bashrc
+conda activate compu21
+
+hostname
+date
+# Ejecutar script
+
+cd /home/est_posgrado_natalia.huitzil/ST2/Prueba48
+
+#cd /home/est_posgrado_natalia.huitzil/.conda/envs/myenv/bin/python3.8
+#cd/home/est_posgrado_natalia.huitzil/.conda/envs/myenv/bin/python3.8 runner.py
+#/home/est_posgrado_natalia.huitzil/.conda/envs/compu21/bin/python3.8 Cluster_Prueba7_Denoising3curvGaussian.py
+
+
+#python Cluster_Prueba48_DIPOPP_0_debU_30K_snPsOpp.py
+python Cluster_Prueba48_VectorialTotalVariationOPP_1_debU_30K_snPs.py
+
+date
