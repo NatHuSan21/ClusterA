@@ -1,0 +1,21 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+/opt/slurm/var/spool/slurmd/job35725/slurm_script: line 23: cd: /home/est_posgrado_natalia.huitzil/ST2/Prueba31/: No such file or directory
+slurmstepd: error: *** JOB 35725 ON g-0-1 CANCELLED AT 2023-05-03T22:27:17 ***
