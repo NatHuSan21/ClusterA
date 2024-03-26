@@ -1,0 +1,25 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+Traceback (most recent call last):
+  File "/home/est_posgrado_natalia.huitzil/ST2/Prueba34/Cluster_Prueba34_VectorialTotalVariation_2.py", line 149, in <module>
+    out_img_avg_pil.save(fname)
+  File "/home/est_posgrado_natalia.huitzil/.conda/envs/compu21/lib/python3.10/site-packages/PIL/Image.py", line 2317, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: './restoration/P342/debU_P342_0kodim1_small.png'
